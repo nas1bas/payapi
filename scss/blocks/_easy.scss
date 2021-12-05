@@ -1,0 +1,30 @@
+.easy {
+    &__container {
+        margin-top: 150px;
+        display: flex;
+        align-items: center;
+    }
+
+    &__content {
+        margin-left: 125px;
+    }
+
+    &__title {
+        font-family: "DM Serif Display";
+        font-size: 48px;
+        line-height: 56px;
+        color: $main-color;
+        margin-bottom: 24px;
+    }
+
+    &__text {
+        width: 445px;
+        font-family: "Public Sans";
+        font-style: normal;
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 28px;
+        color: #6C8294;
+    }
+}
+
