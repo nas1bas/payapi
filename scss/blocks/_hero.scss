@@ -75,7 +75,7 @@
     .hero {
         text-align: center;
         padding: 50px;
-        background-image: url("../../img/tablet-hero.png");
+        background-image: url("../img/tablet-hero.png");
         background-repeat: no-repeat;
         background-position: top;
         background-size: 768px;
@@ -125,7 +125,7 @@
 @include breakpoint-down(425px) {
     .hero {
         padding: 50px;
-        background-image: url("../../img/mobile-hero.png");
+        background-image: url("../img/mobile-hero.png");
         background-repeat: no-repeat;
         background-position: top;
         background-size: 425px;
