@@ -83,6 +83,7 @@
         height: 500px;
 
         &__menu {
+            padding-top: 65px;
             position: absolute;
             z-index: 1;
             top: 0;
@@ -101,13 +102,11 @@
         }
         &__title {
             margin-top: 65px;
-            // margin-left: 75px;
             text-align: center;
         }
 
         &__text {
             text-align: center;
-            // margin-left: 100px;
         }
 
         &__link {
@@ -116,52 +115,62 @@
         }
     }
 }
+
+
 
 @include breakpoint-down(425px) {
     .about {
         position: relative;
         z-index: 1;
-        width: 100%;
-        max-width: 1200px;
-        background-image: url("../img/about-bg.png");
-        background-repeat: no-repeat;
-        background-size: 750px;
-        background-position-y: bottom;
-        margin-top: 205px;
-        padding: 80px 0 80px 0;
-        background-color: #1b262f;
-        height: 500px;
+        height: 680px;
 
-        &__menu {
-            position: absolute;
-            z-index: 1;
-            top: 0;
-            &:nth-child(4) {
-                margin-right: 10px;
-            }
+        &__container {
+            display: flex;
+            padding-top: 100px;
+            padding-bottom: 100px;
+            align-items: center;
         }
 
-        &__item {
-            margin-bottom: 15px;
-        }
-
-        &__content {
-            margin-left: 75px;
-            max-width: 463px;
-        }
         &__title {
-            margin-top: 65px;
+            margin-bottom: 24px;
+            margin-top: 94px;
+            width: 327px;
             text-align: center;
+            font-size: 32px;
+            line-height: 36px;
+            margin-left: -45px;
         }
 
         &__text {
+            margin-left: -45px;
+            width: 327px;
+            height: 140px;
+            margin-bottom: 60px;
             text-align: center;
         }
 
         &__link {
-            text-align: center;
-            margin-left: 175px;
+            padding: 10px;
+            align-items: center;
+            margin-left: 75px;
+        }
+
+        &__menu {
+            position: absolute;
+            top: 0%;
+        }
+
+        &__item {
+            margin-left: -40px;
+            width: 107px;
+            height: 15px;
+            margin-right: 95px;
+            margin-bottom: 45px;
+        }
+
+        &__img {
+            width: 127px;
+            height: 17px;
         }
     }
 }
-

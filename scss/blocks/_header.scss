@@ -1,5 +1,7 @@
 .header {
     padding-top: 56px;
+    position: relative;
+    z-index: 1;
 
     &__container {
         display: flex;
@@ -12,6 +14,14 @@
         }
     }
 
+    &__btn {
+        display: none;
+        width: 24px;
+        height: 11px;
+        background: none;
+        background-image: url("../img/toggle-open.svg");
+        border: none;
+    }
 }
 
 .sitenav {
@@ -42,14 +52,3 @@
     }
 }
 
-@include breakpoint-down(768px) {
-    .header {
-        .sitenav {
-            display: none;
-        }
-
-        &__link {
-            display: none;
-        }
-    }
-}

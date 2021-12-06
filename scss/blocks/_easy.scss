@@ -24,7 +24,50 @@
         font-weight: normal;
         font-size: 15px;
         line-height: 28px;
-        color: #6C8294;
+        color: #6c8294;
     }
 }
 
+@include breakpoint-down(768px) {
+    .easy {
+        &__container {
+            margin-top: 150px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        &__img {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        &__content {
+            margin-top: 48px;
+        }
+
+        &__title {
+            margin-left: 10px;
+        }
+
+        &__text {
+            text-align: center;
+            margin-left: -76px;
+            width: 570px;
+        }
+    }
+}
+
+
+@include breakpoint-down(425px) {
+    .easy {
+
+        &__title {
+           font-size: 36px;
+            margin-left: -90px;
+        }
+
+        &__text {
+            text-align: center;
+            margin-left: -125px;
+            width: 339px;
+        }
+    }
+}
