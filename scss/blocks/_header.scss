@@ -1,83 +1,88 @@
 .header {
-    position: absolute;
-    z-index: 2;
-    width: 100%;
-    margin-top: 40px;
+    position: relative;
+    z-index: 1;
+
     &__container {
         display: flex;
         align-items: center;
-    }
+        margin-top: 56px;
+     }
 
-    &__logo {
+     &__logo {
         flex-shrink: 0;
-        margin-right: 65px;
-    }
+     }
 
-    &__link {
-        margin-left: auto;
-    }
+     &__logo-img {
+         display: block;
+         margin-right: 40px;
+     }
 
-    &__btn {
-        cursor: pointer;
+     &__btn {
+         display: none;
+         width: 28px;
+         height: 17px;
+         background: none;
+         background-image: url("../img/toggler-open.svg");
+         border: none;
+     }  
+
+     &__link-btn {
         display: none;
-        margin-left: auto;
-        width: 28px;
-        height: 17px;
-        border: none;
-        background: none;
-        background-image: url("../img/toggle-open.svg");
+        max-width: 252px;
     }
 }
 
-.navbar {
+.close-btn {
+    width: 22px;
+    height: 23px;
+    background-image: url(../img/toggler-close.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+    
+
+.sitenav {
+    margin-right: auto;
+
     &__list {
         display: flex;
-        margin: 0;
-        padding: 0;
+        list-style-type: none;
     }
 
-    &__link {
-        margin-right: 40px;
-        font-weight: bold;
-        font-size: $fs;
-        line-height: 18px;
-        color: #36536b;
-        opacity: 0.7;
-
-        &:hover {
-            text-decoration: underline;
-        }
-
-        &:active {
+        &__link {
+            padding-right: 20px;
+            padding-left: 20px;
             text-decoration: none;
-            opacity: 1;
-        }
-    }
-}
-
-.menu {
-    &__nav {
-        margin-top: 43px;
-
-        &--item {
-            padding: 0 0 32px 0;
-        }
-        &--link {
-            color: #fbfcfe;
             font-weight: bold;
-            font-size: 20px;
-            line-height: 23px;
-            margin-left: 265px;
-            opacity: 0.7;
+            font-size: 15px;
+            line-height: 18px;
+            color: #36536B;
+            mix-blend-mode: normal;
+            opacity: 0.7; 
+
+        &__link:hover {
+            color: $main-hover-text;
+        }
+            
+         &__link:active {
+            color: $main-active-text;
         }
     }
-    display: none;
 }
 
-@include breakpoint-down(768px) {
-    .header {
-        margin-top: 40px;
 
+@include breakpoint-down (768px) {
+    .header {
+        &__container {
+            margin-top: 50px;
+            margin-top: 20px;
+         }
+}
+}
+
+
+@include breakpoint-down (667px) {
+    .header {
         &__link {
             display: none;
         }
@@ -85,43 +90,53 @@
         &__btn {
             display: block;
         }
+
+        &__logo {
+            margin-right: auto;
+        }
+
+        &__link-btn {
+            display: block;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
     }
 
-    .navbar {
+
+    .sitenav {
         display: none;
-    }
-
-    .menu {
-        padding: 48px 24px;
-        top: -40px;
-        height: 100vh;
-        width: 85%;
         position: absolute;
         z-index: 1;
-        display: none;
-        flex-direction: column;
-        right: 0;
-        background-color: #1b262f;
+        top: 100%;
+        right: 0%;
+        height: 100vh;
+        background:#1B262F;
+        width: 80%;
 
-        &__btn {
-            margin-bottom: 24px;
-            margin-left: 575px;
-            width: 22px;
-            height: 23px;
-            border: none;
-            background: none;
-            background-image: url("../img/toggle-close.png");
+        &::before { 
+            height: 5px;
+            width: 100px;
+        }
+        
+
+        &__list {
+            padding: 32px 0;
+            flex-direction: column;
+            text-align: center;
         }
 
-        &__line {
-            width: 100%;
-            border: none;
-            height: 1px;
-            background-color: #fbfcfe;
+        &__item {
+            padding-bottom: 22px;
         }
 
-        .menu-open {
-            display: flex;
+        &__link {
+            text-align: center;
+            color: #FBFCFE;
         }
+    }
+
+    .sitenav-open {
+        display: block;
     }
 }
