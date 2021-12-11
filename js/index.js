@@ -1,8 +1,8 @@
 var toggleButton = document.querySelector (".header__btn")
-var siteNavbar = document.querySelector (".sitenav")
+var siteNavbar = document.querySelector (".menu")
 
 toggleButton.addEventListener("click", () =>{
-    siteNavbar.classList.toggle("sitenav-open");
+    siteNavbar.classList.toggle("menu-open");
     toggleButton.classList.toggle("close-btn");
 });
 

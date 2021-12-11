@@ -2,16 +2,14 @@
     position: absolute;
     z-index: 2;
     width: 100%;
-    margin-top: 40px;
-
     &__container {
+        margin-top: 40px;
         display: flex;
         align-items: center;
     }
 
     &__logo {
         flex-shrink: 0;
-        margin-right: 65px;
     }
 
     &__link {
@@ -30,11 +28,10 @@
     }
 }
 
-.navbar {
+.sitenav {
+    margin-left: 65px;
     &__list {
         display: flex;
-        margin: 0;
-        padding: 0;
     }
 
     &__link {
@@ -42,7 +39,7 @@
         font-weight: bold;
         font-size: $fs;
         line-height: 18px;
-        color: #36536b;
+        color: $main-color;
         opacity: 0.7;
 
         &:hover {
@@ -57,6 +54,7 @@
 }
 
 .menu {
+    display: none;
     &__nav {
         margin-top: 43px;
 
@@ -72,7 +70,6 @@
             opacity: 0.7;
         }
     }
-    display: none;
 }
 
 @include breakpoint-down(768px) {
@@ -88,7 +85,7 @@
         }
     }
 
-    .navbar {
+    .sitenav {
         display: none;
     }
 
