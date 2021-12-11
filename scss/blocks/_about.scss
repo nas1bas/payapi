@@ -126,7 +126,7 @@
 }
 
 
-@include breakpoint-down (410px) {
+@include breakpoint-down (419px) {
     .about {
         &__title {
             font-size: 32px;
