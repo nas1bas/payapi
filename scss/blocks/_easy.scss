@@ -1,1 +1,61 @@
+.easy {
+    &__container {
+        display: flex;
+        align-items: center;
+    }
 
+    &__content {
+        margin-left: 125px;
+    }
+
+    &__title {
+        font-family: "DM Serif Display";
+        font-size: 48px;
+        line-height: 56px;
+        color: $main-color;
+    }
+
+    &__text {
+        margin-top: 24px;
+        width: 100%;
+        max-width: 445px;
+        font-size: 15px;
+        line-height: 28px;
+        color: #6c8294;
+    }
+}
+
+@include breakpoint-down(768px) {
+    .easy {
+        &__container {
+            display: flex;
+            flex-direction: column;
+        }
+        &__content {
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        &__text {
+            width: 100%;
+            max-width: 573px;
+            font-size: 15px;
+            line-height: 28px;
+        }
+    }
+}
+
+@include breakpoint-down(425px) {
+    .easy {
+        &__title {
+            font-size: 36px;
+            line-height: 36px;
+        }
+
+        &__text {
+            width: 100%;
+            max-width: 328px;
+        }
+    }
+}

@@ -1,0 +1,74 @@
+.simple {
+    background-image: url("../img/simple-bg.png");
+    background-repeat: no-repeat;
+    background-position: top right calc(50% - 540px);
+    &__container {
+        padding-top: 400px;
+        padding-bottom: 400px;
+    }
+
+    &__title {
+        font-family: "DM Serif Display";
+        font-size: 48px;
+        line-height: 56px;
+        color: $main-color;
+    }
+
+    &__text {
+        width: 100%;
+        max-width: 445px;
+        font-size: $fs;
+        line-height: 28px;
+        color: #6c8294;
+    }
+}
+
+@include breakpoint-down(768px) {
+    .simple {
+        background-image: url("../img/mobiles.png");
+        background-position: center;
+
+        &__container {
+            margin-top: -495px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__title {
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            margin-top: 620px;
+            font-size: 48px;
+            line-height: 56px;
+        }
+
+        &__text {
+            width: 100%;
+            max-width: 573px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            font-size: $fs;
+            line-height: 28px;
+            color: #6c8294;
+        }
+    }
+}
+
+@include breakpoint-down(425px) {
+    .simple {
+        background-size: 420px;
+        &__container {
+            margin-top: -495px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__title {
+            font-size: 36px;
+            line-height: 36px;
+        }
+
+    }
+}

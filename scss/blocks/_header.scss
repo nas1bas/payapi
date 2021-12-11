@@ -1,0 +1,127 @@
+.header {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    margin-top: 40px;
+    &__container {
+        display: flex;
+        align-items: center;
+    }
+
+    &__logo {
+        flex-shrink: 0;
+        margin-right: 65px;
+    }
+
+    &__link {
+        margin-left: auto;
+    }
+
+    &__btn {
+        cursor: pointer;
+        display: none;
+        margin-left: auto;
+        width: 28px;
+        height: 17px;
+        border: none;
+        background: none;
+        background-image: url("../img/toggle-open.svg");
+    }
+}
+
+.navbar {
+    &__list {
+        display: flex;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__link {
+        margin-right: 40px;
+        font-weight: bold;
+        font-size: $fs;
+        line-height: 18px;
+        color: #36536b;
+        opacity: 0.7;
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+        &:active {
+            text-decoration: none;
+            opacity: 1;
+        }
+    }
+}
+
+.menu {
+    &__nav {
+        margin-top: 43px;
+
+        &--item {
+            padding: 0 0 32px 0;
+        }
+        &--link {
+            color: #fbfcfe;
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 23px;
+            margin-left: 265px;
+            opacity: 0.7;
+        }
+    }
+    display: none;
+}
+
+@include breakpoint-down(768px) {
+    .header {
+        margin-top: 40px;
+
+        &__link {
+            display: none;
+        }
+
+        &__btn {
+            display: block;
+        }
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .menu {
+        padding: 48px 24px;
+        top: -40px;
+        height: 100vh;
+        width: 85%;
+        position: absolute;
+        z-index: 1;
+        display: none;
+        flex-direction: column;
+        right: 0;
+        background-color: #1b262f;
+
+        &__btn {
+            margin-bottom: 24px;
+            margin-left: 575px;
+            width: 22px;
+            height: 23px;
+            border: none;
+            background: none;
+            background-image: url("../img/toggle-close.png");
+        }
+
+        &__line {
+            width: 100%;
+            border: none;
+            height: 1px;
+            background-color: #fbfcfe;
+        }
+
+        .menu-open {
+            display: flex;
+        }
+    }
+}
